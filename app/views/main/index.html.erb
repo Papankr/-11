@@ -1,0 +1,14 @@
+<h1>Length with a square number</h1>
+
+<form action="/check" accept-charset="UTF-8" method="get">
+  <label for="number">Enter </label>
+  <input type="text" name="number">
+  <input type="submit" value="Check" data-disable-with="Check">
+</form>
+
+<br>
+<a href="/tickets">All in XML</a>
+<br><br>
+
+<b>Last test:</b>
+<span style="background: #ffeb3b; padding: 5px;"><%= @last_ticket.number %></span>

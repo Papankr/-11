@@ -1,0 +1,26 @@
+<h1>Page with final result table</h1>
+<table class="table">
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">Number</th>
+    <th scope="col">Array</th>
+    <th scope="col">MAX len</th>
+  </tr>
+  </thead>
+  <tbody>
+  <%unless @result.length==0 then%>
+    <%@result.each_with_index do|val,index| %>
+      <tr>
+        <th scope="row"><%=index+1 %></th>
+        <td><%=val.join(' ') %></td>
+        <td><%= @maxlen==val.size ? true :false %></td>
+      </tr>
+    <% end %>
+    <tr><th scope="row">Max length = <%=@maxlen %></th></tr>
+  <% else %>
+    <th scope="row"><h3>Not found our array</h3></th>
+  <%end %>
+  </tbody>
+</table>
+<h3>Total quantity is <%=@result.size %></h3>
+<a href="/">Back</a>
